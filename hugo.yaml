@@ -1,4 +1,4 @@
-baseURL: https://efcorebeginner.com/
+baseURL: http://hugo.efcorebeginner.com.s3-website-us-east-1.amazonaws.com/
 languageCode: en-us
 title: Learn EF Core, ASP.NET and React
 theme: "PaperMod"
