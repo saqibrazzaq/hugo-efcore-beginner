@@ -121,9 +121,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: person-api
+      name: Basic API
+      url: /person-api/
       weight: 10
     - identifier: tags
       name: tags
