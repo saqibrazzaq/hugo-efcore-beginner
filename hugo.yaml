@@ -3,6 +3,11 @@ languageCode: en-us
 title: Learn EF Core, ASP.NET and React
 theme: "PaperMod"
 
+deployment:
+  targets:
+    - name: production
+      URL: "s3://hugo.efcorebeginner.com?region=us-east-1"
+
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
