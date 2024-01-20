@@ -1,5 +1,6 @@
 ---
 title: Single table basic example
+weight: 20
 ShowToc: true
 TocOpen: true
 ---

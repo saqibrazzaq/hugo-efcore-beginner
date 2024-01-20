@@ -1,5 +1,6 @@
 ---
-title: Build Person API, very basic using ASP.NET Core Web API and EF Core
+title: Introduction - Start here
+weight: 10
 ---
 
 If you want to learn the basics of Entity Framework, but use best design and architectural patterns, start from this page.
