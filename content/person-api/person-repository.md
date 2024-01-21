@@ -1,5 +1,5 @@
 ---
-title: Repository class for Person Entity
+title: 4. Repository class for Person Entity
 weight: 50
 ShowToc: true
 TocOpen: true

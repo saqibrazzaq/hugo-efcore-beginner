@@ -1,5 +1,5 @@
 ---
-title: Searching, paging and sorting in Entity Framework 7
+title: 9. Searching, paging and sorting in Entity Framework 7
 weight: 100
 ShowToc: true
 TocOpen: true

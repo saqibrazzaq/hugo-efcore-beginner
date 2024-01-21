@@ -1,5 +1,5 @@
 ---
-title: Exception handling in ASP.NET Core Web API using Middleware
+title: 10. Exception handling in ASP.NET Core Web API using Middleware
 weight: 110
 ShowToc: true
 TocOpen: true

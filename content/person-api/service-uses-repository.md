@@ -1,5 +1,5 @@
 ---
-title: Use Repository in Service, and DTOs
+title: 6. Use Repository in Service, and DTOs
 weight: 70
 ShowToc: true
 TocOpen: true

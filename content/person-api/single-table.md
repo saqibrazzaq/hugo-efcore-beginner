@@ -1,5 +1,5 @@
 ---
-title: Single table basic example
+title: 1. Single table basic example
 weight: 20
 ShowToc: true
 TocOpen: true

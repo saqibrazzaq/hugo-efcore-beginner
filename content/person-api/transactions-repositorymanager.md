@@ -1,5 +1,5 @@
 ---
-title: Transactions with RepositoryManager
+title: 5. Transactions with RepositoryManager
 weight: 60
 ShowToc: true
 TocOpen: true

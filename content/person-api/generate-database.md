@@ -1,5 +1,5 @@
 ---
-title: Generate database and tables
+title: 2. Generate database and tables
 weight: 30
 ShowToc: true
 TocOpen: true

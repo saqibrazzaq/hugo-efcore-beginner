@@ -125,14 +125,10 @@ menu:
       name: Basic API
       url: /person-api/
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - identifier: person-react
+      name: Basic React
+      url: /person-react/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:

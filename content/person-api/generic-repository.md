@@ -1,5 +1,5 @@
 ---
-title: Generic Repository Base Class
+title: 3. Generic Repository Base Class
 weight: 40
 ShowToc: true
 TocOpen: true

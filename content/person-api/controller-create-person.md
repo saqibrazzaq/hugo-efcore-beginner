@@ -1,5 +1,5 @@
 ---
-title: Controller to create new Person
+title: 7. Controller to create new Person
 weight: 80
 ShowToc: true
 TocOpen: true
