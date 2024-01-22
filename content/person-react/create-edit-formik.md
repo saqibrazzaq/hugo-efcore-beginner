@@ -1,6 +1,6 @@
 ---
 title: 6. Create and Edit Person using Formik
-weight: 70
+weight: 270
 ShowToc: true
 TocOpen: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: 2. Add layout, header, footer, navigation menu using Chakra UI
-weight: 30
+weight: 230
 ShowToc: true
 TocOpen: true
 ---

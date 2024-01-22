@@ -1,6 +1,6 @@
 ---
 title: 8. Searching, paging and sorting in React
-weight: 90
+weight: 290
 ShowToc: true
 TocOpen: true
 ---

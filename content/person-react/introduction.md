@@ -1,6 +1,6 @@
 ---
 title: 0. Introduction - React frontend app for Person API
-weight: 10
+weight: 210
 ShowToc: true
 TocOpen: true
 ---

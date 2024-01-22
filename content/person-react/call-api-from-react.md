@@ -1,6 +1,6 @@
 ---
 title: 4. Person Response DTO, call API from React component and fix CORS
-weight: 50
+weight: 250
 ShowToc: true
 TocOpen: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: 10. Create container and deploy on local Docker instance
-weight: 110
+weight: 310
 ShowToc: true
 TocOpen: true
 ---

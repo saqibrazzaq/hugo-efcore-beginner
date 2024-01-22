@@ -1,6 +1,6 @@
 ---
 title: 9. Displaying error messages from web API
-weight: 100
+weight: 300
 ShowToc: true
 TocOpen: true
 ---

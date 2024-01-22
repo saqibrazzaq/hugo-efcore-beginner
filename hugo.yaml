@@ -12,6 +12,7 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+mainsections: ["person-api", "person-react", "addressbook"]
 
 googleAnalytics: G-3H1V8ZWTTY
 
@@ -83,13 +84,13 @@ params:
       and use Microsoft SQL Server Express as the database. Learn
       how to use Entity Framework with the repository design pattern.
 
-  socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
-    - name: github
-      url: "https://github.com/"
+  # socialIcons:
+  #   - name: twitter
+  #     url: "https://twitter.com/"
+  #   - name: stackoverflow
+  #     url: "https://stackoverflow.com"
+  #   - name: github
+  #     url: "https://github.com/"
 
   analytics:
     google:
@@ -129,6 +130,10 @@ menu:
       name: Basic React
       url: /person-react/
       weight: 20
+    - identifier: addressbook
+      name: Address Book
+      url: /addressbook/
+      weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:

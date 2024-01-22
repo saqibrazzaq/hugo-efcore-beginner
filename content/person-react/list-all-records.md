@@ -1,6 +1,6 @@
 ---
 title: 5. Building List Persons page with React and Chakra UI
-weight: 60
+weight: 260
 ShowToc: true
 TocOpen: true
 ---

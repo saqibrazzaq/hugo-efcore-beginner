@@ -1,6 +1,6 @@
 ---
 title: 11. Upload container to docker hub and deploy on website hosted on VPS
-weight: 120
+weight: 320
 ShowToc: true
 TocOpen: true
 ---

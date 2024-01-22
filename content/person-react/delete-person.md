@@ -1,6 +1,6 @@
 ---
 title: 7. Delete Person page with Confirmation Dialog and Toast notification
-weight: 80
+weight: 280
 ShowToc: true
 TocOpen: true
 ---
