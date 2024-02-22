@@ -35,9 +35,9 @@ Create a class **PhoneLabelService** in the Services folder. It will inherit fro
 
 Here we are doing something new. We call a validation method before doing the delete operation. See the screenshots below to first understand the requirements of this validation.
 
-![edit phone having label](/images/edit-phone-having-label.jpg "edit phone having label")
+![edit phone having label](/images/blog/edit-phone-having-label.jpg "edit phone having label")
 
-![delete phone label](/images/delete-phone-label.jpg "delete phone label")
+![delete phone label](/images/blog/delete-phone-label.jpg "delete phone label")
 
 There are two labels shown in the above screenshot, Home phone and Work phone. We have a contact, who has a phone number with “Home phone” label. Should we allow to delete the Home phone label? No. We must first check from the database if that label is being used in some contact or not. If that label is used somewhere, it should not be deleted. With cascade delete, it will also delete the child record. If not cascade delete, then the child record will become orphan, without ID of the parent.
 
@@ -231,7 +231,7 @@ See the screenshot below for the React app, delete phone label screen. The Delet
 
 We could also use Count() method to show the exact count, but Any() method just returns true if even one record is found. It is much more faster than the Count() method. For such delete operation, we don’t even need the Count method, as we are not interested in finding how many phone numbers have this **Home Phone** label. We just need a Yes//No whether it is safe to delete or not.
 
-![react delete phone label](/images/react-delete-phone-label.jpg "react delete phone label")
+![react delete phone label](/images/blog/react-delete-phone-label.jpg "react delete phone label")
 
 ```cs
 [Route("api/[controller]")]
@@ -279,15 +279,15 @@ The service and controllers for Email, website, address, chat and label will als
 
 Take an example of contact label. A contact Buddy Green has label **Home**.
 
-![edit contact home label](/images/edit-contact-home-label-1024x495.jpg "edit contact home label")
+![edit contact home label](/images/blog/edit-contact-home-label-1024x495.jpg "edit contact home label")
 
 Now click on Settings – Labels – Home – Delete icon. There are few contacts, which are labelled Home. Can we just delete this label?
 
-![label search delete icon](/images/label-search-delete-icon.jpg "label search delete icon")
+![label search delete icon](/images/blog/label-search-delete-icon.jpg "label search delete icon")
 
 The React page calls AnyConact api to find whether this label is used anywhere or not. It gives error message because the contact Buddy Green is labelled Home.
 
-![delete contact label](/images/delete-contact-label.jpg "delete contact label")
+![delete contact label](/images/blog/delete-contact-label.jpg "delete contact label")
 
 ## Contact Service
 
@@ -386,11 +386,11 @@ Lets have a look at the database diagram first. The Contact has zero to many rel
 
 But when we delete a Contact and call ContactRepository.Delete() method, it will automatically delete the data from its child tables. Well, this is the behavior that we want. If a Contact has 2 phone numbers, an email address and a website, we just show these data in the Delete page and ask user for confirmation. We won’t stop user and ask him to first delete all his phone numbers one by one, all his addresses and his emails etc. and then delete. No, this is not suitable in this case.
 
-![contact database diagram](/images/contact-database-diagram.jpg "contact database diagram")
+![contact database diagram](/images/blog/contact-database-diagram.jpg "contact database diagram")
 
 When we created the related tables Contactlabel, ContactPhone, ContactEmail etc. we added non null ContactId as foreign key. Due to this, the Entity Framework adds cascade delete behavior, so that when we delete Contact, it will also delete all its child records.
 
-![contact phone cascade delete](/images/contact-phone-cascade-delete.jpg "contact phone cascade delete")
+![contact phone cascade delete](/images/blog/contact-phone-cascade-delete.jpg "contact phone cascade delete")
 
 When we look at the code below, there is one Delete method call, it deletes child records automatically. No need to call Delete method 6 times on its child tables.
 

@@ -27,7 +27,7 @@ Now where should we add links to timezone and translation pages. In the top menu
 
 There is one to many relationship between Country and Timezone/Translation. We can add in Create/Edit Country page. Or we can also add in Country list page. Both are suitable. We will add the links in Country list page as follows.
 
-![country list with icons](/images/country-list-with-icons.jpg "country list with icons")
+![country list with icons](/images/blog/country-list-with-icons.jpg "country list with icons")
 
 The above screenshot shows that we have 4 icon buttons, for each country. We had text links for Edit and Delete in all pages. If we add text links for Timezones and Translation, it will cover up a lot of space. We used icon buttons to save some space. We can also have a single icon button like option, more or three dots, which opens a popup menu. The popup menu can show edit, delete, timezone and translation for each country. We will add such menu, where there are more options for Country. For this article, we will continue with the four icon buttons, right on the country row.
 

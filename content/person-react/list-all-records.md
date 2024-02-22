@@ -7,7 +7,7 @@ TocOpen: true
 
 This is the 5th tutorial in React client app series that work with Persons web API. In last tutorial we created a new component in React and called web API to get all persons. We also created DTO for Person response to get strongly typed object. But we just called the API and displayed the response in Console window. In this article we will see how we can display the list data in a table.
 
-![person list table](/images/person-list-table-1024x509.jpg "person list table")
+![person list table](/images/blog/person-list-table-1024x509.jpg "person list table")
 
 ## useEffect hook to load Person List from the web API
 

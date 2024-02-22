@@ -7,7 +7,7 @@ TocOpen: true
 
 This is the 6th article in the React client beginner series, in which we call web API using Axios. In previous article, we created Person List page, which fetched all records from the web API and displayed all records in Table component. In this article you will learn how to use Formik to input data for create and edit Person.
 
-![edit person ui](/images/edit-person-ui.jpg "edit person ui")
+![edit person ui](/images/blog/edit-person-ui.jpg "edit person ui")
 
 ## DTOs for Create and Edit Person
 
@@ -363,6 +363,6 @@ If in any scenario, the Edit operation is different than the Create, then it is 
 
 Run the web API and React client app using npm start. Try creating new person and update them, it should work with all validations.
 
-![add edit person](/images/add-edit-person.jpg "add edit person")
+![add edit person](/images/blog/add-edit-person.jpg "add edit person")
 
 In the next article, we will create the delete page.

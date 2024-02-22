@@ -11,7 +11,7 @@ We have created a fully functional Address Book app, which consists of web API b
 
 Open the AddressBook project in Visual Studio, we are using the latest community edition 2023, which is free for personal use. Right click on the web API project and choose Add – container orchestrator support. From the dropdown choose Docker compose.
 
-![container support](/images/container-support.jpg "container support")
+![container support](/images/blog/container-support.jpg "container support")
 
 Choose Linux as Docker OS. For this step to succeed, Docker must be installed locally.
 
@@ -194,11 +194,11 @@ docker ps
 
 The build command will take some time if you are running the build command for the first time. The docker will download the images from hub.docker.com if they do not exist locally. After build, we create the containers and then run these. The last command docker ps will display the running containers. It should show the following output.
 
-![docker ps addressbook](/images/docker-ps-addressbook-1024x264.jpg "docker ps addressbook")
+![docker ps addressbook](/images/blog/docker-ps-addressbook-1024x264.jpg "docker ps addressbook")
 
 If you are running Docker Desktop on Windows, you can also check the running containers in Docker Desktop. It will show the output like below.
 
-![docker desktop running containers 2](/images/docker-desktop-running-containers-2-1024x339.jpg "docker desktop running containers")
+![docker desktop running containers 2](/images/blog/docker-desktop-running-containers-2-1024x339.jpg "docker desktop running containers")
 
 ## URLs to Access Web API and React App Running in Docker
 
@@ -215,7 +215,7 @@ Server name: localhost,1450
 Login: sa
 Password: what you wrote in db.env
 
-![sql server connect docker](/images/sql-server-connect-docker.jpg "sql server connect docker")
+![sql server connect docker](/images/blog/sql-server-connect-docker.jpg "sql server connect docker")
 
 ## Deploy Containers to Live Website
 
@@ -243,7 +243,7 @@ subdomain for React app e.g. addressbook-web.efcorebeginner.com
 
 A subdomain should be easy to create using the provider’s website. We use ionos.com for hosting and VPS. It is very easy to create a new subdomain.
 
-![ionos create subdomain](/images/ionos-create-subdomain.jpg "ionos create subdomain")
+![ionos create subdomain](/images/blog/ionos-create-subdomain.jpg "ionos create subdomain")
 
 **VPS Settings**
 
@@ -303,7 +303,7 @@ docker compose push
 
 You should also verify by opening https://hub.docker.com/ in your browser. Make sure that your images are successfully uploaded to the Docker hub.
 
-![docker hub image uploaded](/images/docker-hub-image-uploaded.jpg "docker hub image uploaded")
+![docker hub image uploaded](/images/blog/docker-hub-image-uploaded.jpg "docker hub image uploaded")
 
 ### docker-compose.yml file for Installation on Live Website
 

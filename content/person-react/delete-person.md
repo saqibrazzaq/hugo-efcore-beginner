@@ -87,7 +87,7 @@ const loadPerson = () => {
 
 Run the project using npm start, if not already running. Open person list and click on the Delete link. Open browser console window. The Json response of Person should be displayed on the delete page, if person id is correct. Or if something is wrong, it should display error.
 
-![delete console log](/images/delete-console-log-1024x260.jpg "delete console log")
+![delete console log](/images/blog/delete-console-log-1024x260.jpg "delete console log")
 
 ## Page layout
 
@@ -223,7 +223,7 @@ NoContent() method in ASP.NET Core returns 204 http code. 200 http code means Ok
 
 The code should compile correctly now. See the update in React app.
 
-![delete person react](/images/delete-page-react-1.jpg "delete person react")
+![delete person react](/images/blog/delete-page-react-1.jpg "delete person react")
 
 Click on the red Delete button. Nothing happens!! We have missed something. Open PersonDelete.tsx and see the method showAlertDialog. In Visual Studio Code, it is in light grey color, means this method is not called anywhere.
 
@@ -249,7 +249,7 @@ return (
 
 Now click on the red Delete button, it will show the dialog box. Click on Cancel, the dialog box will close. Click on any open space other than the dialog box, it will close. This way of closing is very user friendly and Chakra UI implemented the AlertDialog in an excellent way.
 
-![delete person with dialog](/images/delete-person-with-dialog.jpg "delete person with dialog")
+![delete person with dialog](/images/blog/delete-person-with-dialog.jpg "delete person with dialog")
 
 We are still missing something. The delete workflow does not seem natural. You click on delete button, it opens confirmation dialog. You confirm to delete person. It goes back to the person list. It actually deletes the person from the database. But the problem is that it does it silently. It should display acknowledgment whether the person is actually deleted or not.
 
@@ -300,7 +300,7 @@ We just called the toast method two times
 
 Now delete a person and see the notifications.
 
-![delete person with toast](/images/delete-person-with-toast.jpg "delete person with toast")
+![delete person with toast](/images/blog/delete-person-with-toast.jpg "delete person with toast")
 
 After deleting the person, it goes back to the list person page, but now a notification will be displayed to user, that the person is deleted successfully. You can check the complete code from https://github.com/saqibrazzaq/efcorebeginner/blob/main/Person/react-client/src/persons/PersonDelete.tsx.
 

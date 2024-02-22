@@ -9,7 +9,7 @@ So start by creating a new project in Visual Studio. At this time the latest ver
 
 We will create a basic example with single table named Person. Person table will have few basic columns like name, gender and phone number.
 
-![Configure your new project!](/images/new-project-person.jpg "Configure your new project")
+![Configure your new project!](/images/blog/new-project-person.jpg "Configure your new project")
 
 New ASP.NET Core Web API project in Visual Studio 2022
 Choose all the default options in the next step. Notable options are below:
@@ -25,7 +25,7 @@ Enable OpenAPI support: Yes
 
 We will use Repository pattern throughout all the tutorials. The repository layer will only include all the database (Entity Framework) related code. On top of the repository pattern, we will add a service layer, which will include business/domain logic code. And finally, the Web API controllers will be using the service classes.
 
-![Repository pattern!](/images/Repository-pattern.jpg "Repository pattern")
+![Repository pattern!](/images/blog/Repository-pattern.jpg "Repository pattern")
 
 For a very small project, which we are going to build here now, this really seems a lot of effort. But patterns and architectures promote reusability and better software maintenance, and learning that is much more important than programming syntax.
 
@@ -43,7 +43,7 @@ We also need to add the following EF Core related packages from NuGet. All these
 
 After you install the above packages, the NuGet Installed tab should look like below.
 
-![EF-Core-nuget-packages!](/images/EF-Core-nuget-packages.jpg "EF-Core-nuget-packages")
+![EF-Core-nuget-packages!](/images/blog/EF-Core-nuget-packages.jpg "EF-Core-nuget-packages")
 
 Back to Entities\Person.cs class, add the Table annotation for the class. This means our table name in SQL Server database will be “Person”.
 

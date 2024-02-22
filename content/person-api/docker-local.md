@@ -13,7 +13,7 @@ We will create containers using docker compose. Once you have docker compose fil
 
 Since we are using Microsoft Visual Studio 2022 Community Edition for development of web API, it comes with good support for dockerizing the app. Open the project in Visual Studio, right click on **Persons** web API project, in menu go to Add -> container orchestrator support. From the dropdown choose Docker compose.
 
-![container support](/images/container-support.jpg "container support")
+![container support](/images/blog/container-support.jpg "container support")
 
 It will then ask to choose Docker OS from the dropdown, choose Linux. Visual Studio creates the following when you add Container support using this method
 
@@ -34,7 +34,7 @@ docker ps
 
 It will display list of running containers. I am on a Windows system for development and installed Docker Desktop for Windows. There are no containers currently running. It shows the following output.
 
-![docker install ps](/images/docker-install-ps-1024x146.jpg "docker install ps")
+![docker install ps](/images/blog/docker-install-ps-1024x146.jpg "docker install ps")
 
 In Visual Studio, we originally started with single project of type ASP.NET Web API. When we added container support, Visual Studio created the docker files for the web API project.
 
@@ -174,7 +174,7 @@ app.Run();
 
 Open Visual Studio and Debug/Run the project, it should print the connection string from the .env file.
 
-![visual studio connectionstring](/images/visual-studio-connection-string-1024x255.jpg "visual studio connectionstring")
+![visual studio connectionstring](/images/blog/visual-studio-connection-string-1024x255.jpg "visual studio connectionstring")
 
 ## Run with local Docker
 
@@ -182,7 +182,7 @@ Our docker-compose.yml file is ready. Follow the steps below to run on local Doc
 
 Open the Terminal. Change directory to the folder where the .sln and the docker-compose.yml file exists.
 
-![docker terminal sln folder](/images/docker-terminal-sln-folder-1024x380.jpg "docker terminal sln folder")
+![docker terminal sln folder](/images/blog/docker-terminal-sln-folder-1024x380.jpg "docker terminal sln folder")
 
 First step is to build docker images with the following command. It will build the web API project and docker image locally.
 
@@ -190,7 +190,7 @@ First step is to build docker images with the following command. It will build t
 docker compose build
 ```
 
-![docker compose build](/images/docker-compose-build-1024x539.jpg "docker compose build")
+![docker compose build](/images/blog/docker-compose-build-1024x539.jpg "docker compose build")
 
 First time this may take some time to download the dependencies like SQL Server and .NET sdk docker images. The build should be successful. If there is any error, read and review this article again. You can also get the working project and files from the GitHub repository https://github.com/saqibrazzaq/efcorebeginner/blob/main/Person/docker-compose.yml.
 
@@ -200,7 +200,7 @@ Next step is to create the containers in Docker. Do it with the following comman
 docker compose create
 ```
 
-![docker compose create](/images/docker-compose-create-1024x162.jpg "docker compose create")
+![docker compose create](/images/blog/docker-compose-create-1024x162.jpg "docker compose create")
 
 Final step is start these containers with the following command.
 
@@ -208,11 +208,11 @@ Final step is start these containers with the following command.
 docker compose start
 ```
 
-![docker compose start](/images/docker-compose-start-1024x146.jpg "docker compose start")
+![docker compose start](/images/blog/docker-compose-start-1024x146.jpg "docker compose start")
 
 If you have Docker Desktop for Windows, you can open the Docker Desktop and see the running containers.
 
-![docker desktop running containers](/images/docker-desktop-running-containers-1-1024x381.jpg "docker desktop running containers")
+![docker desktop running containers](/images/blog/docker-desktop-running-containers-1-1024x381.jpg "docker desktop running containers")
 
 On terminal, you can also check running containers with docker ps command as follows
 
@@ -220,13 +220,13 @@ On terminal, you can also check running containers with docker ps command as fol
 docker ps
 ```
 
-![docker ps](/images/docker-ps-1024x211.jpg "docker ps")
+![docker ps](/images/blog/docker-ps-1024x211.jpg "docker ps")
 
 On Docker Desktop, click on the person_api container, it will open the Logs. The logs should display some messages from Entity Framework about database initialization and migration. We printed connection string in Program.cs, the logs should also print the connection string from the docker-compose file. If the connection string is not from the docker-compose file, then there is something wrong.
 
 In docker-compose.yml, we mentioned port 8001:80. In your browser, open the URL http://localhost:8001/api/persons. Now you are accessing the web API which is deployed to Docker.
 
-![api persons docker](/images/api-persons-docker-1024x184.jpg "api persons docker")
+![api persons docker](/images/blog/api-persons-docker-1024x184.jpg "api persons docker")
 
 It returns all Persons in the database. Since the container is just created on Docker, there are 0 records, it returned empty array.
 
@@ -244,7 +244,7 @@ docker compose start
 
 Now you just have to run the batch file whenever you want to update containers in Docker. To run the batch file, just type its name in Terminal and press enter.
 
-![run batch file](/images/run-batch-file-1024x381.jpg "run batch file")
+![run batch file](/images/blog/run-batch-file-1024x381.jpg "run batch file")
 
 ## Move passwords and secrets outside of docker-compose.yml
 

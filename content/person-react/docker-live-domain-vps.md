@@ -15,27 +15,27 @@ Complete code for the whole series is at https://github.com/saqibrazzaq/efcorebe
 
 To host our app, we need a VPS where we can install Docker. For this tutorial, I will be using Microsoft Azure with a new account, as there is $200 credit in it, which can be utilized in the VM. I will create a new VM and install Ubuntu Server on it. You can create a new VM on your own hosting provider or any hosting provider that offers VPS. If you want to get free VM for trial on Microsoft Azure, create a new account at https://portal.azure.com. After login, create a new Resource, in search type **ubuntu**, choose Ubuntu Server 22.04 LTS and Create it.
 
-![create ubuntu server 22 azure](/images/create-ubuntu-server-22-azure-1024x444.jpg "create ubuntu server 22 azure")
+![create ubuntu server 22 azure](/images/blog/create-ubuntu-server-22-azure-1024x444.jpg "create ubuntu server 22 azure")
 
 It will open **Create a Virtual Machine** page. Choose your subscription (free tier for new account), choose group (create new if first time). In name write ubuntu-docker. Image selected would be **Ubuntu Server 22.04 LTS – x64 Gen2**. Keep the architecture **x64** which is default.
 
-![create ubuntu fields](/images/create-ubuntu-fields.jpg "create ubuntu fields")
+![create ubuntu fields](/images/blog/create-ubuntu-fields.jpg "create ubuntu fields")
 
 Next we choose the size of the VM, which consists of cpu and memory. We need at least 2 GB memory which is a requirement for SQL Server. Currently the minimal specs with 2 GB memory VM is Standard_B1ms with 1 vcpu and 2 GB memory. It costs $15.11 per month, we got $200 free for new account, so we can keep using this VM for free for even whole year!!.
 
-![choose size of vm](/images/choose-size-of-vm.jpg "choose size of vm")
+![choose size of vm](/images/blog/choose-size-of-vm.jpg "choose size of vm")
 
 Next we create Administrator user account on this VM. We will choose Password authentication for this tutorial. You can choose SSH too, if you want more security. We will login via ssh on this VM with the username and password provided here.
 
-![vm create admin user](/images/vm-create-admin-user.jpg "vm create admin user")
+![vm create admin user](/images/blog/vm-create-admin-user.jpg "vm create admin user")
 
 After that select inbound ports 22, 80 and 443. We need all these ports open publicly as 22 is required for ssh login and 80/443 are required for web apps.
 
-![vm ports](/images/vm-ports.jpg "vm ports")
+![vm ports](/images/blog/vm-ports.jpg "vm ports")
 
 Now Review and Create this VM. It will be ready in a minute. When ready, click on **Go to Resource** button to open properties of this VM. Azure provide a lot of options for the VM like Monitoring, restart, stop, delete, CLI login, view properties like public IP address, cpu, plan, subscription etc. We are only interested in the public IP Azure assigned to our VM. After getting the public IP, we will do the rest via ssh login.
 
-![ubuntu vm properties](/images/ubuntu-vm-properties-1024x302.jpg "ubuntu vm properties")
+![ubuntu vm properties](/images/blog/ubuntu-vm-properties-1024x302.jpg "ubuntu vm properties")
 
 ## Create subdomain and point it to the Ubuntu VM
 
@@ -55,19 +55,19 @@ We will need two subdomains, one for the web API and other for React web app. Be
 1. person-web.efcorebeginner.com – for React web app having UI
 2. person-api.efcorebeginner.com – for ASP.NET web API
 
-![add subdomain](/images/add-subdomain-1024x513.jpg "add subdomain")
+![add subdomain](/images/blog/add-subdomain-1024x513.jpg "add subdomain")
 
 It is very easy to create in ionos.com, I go to my domain, choose subdomain option, choose create new. It just asks for the subdomain name. I created two subdomains using the simple process. After creating both subdomains, I choose the DNS tab on the main website page, it shows all DNS settings for all my subdomains.
 
-![dns menu domain](/images/dns-menu-domain-1024x312.jpg "dns menu domain")
+![dns menu domain](/images/blog/dns-menu-domain-1024x312.jpg "dns menu domain")
 
 Scroll down to see the A records of the new subdomains. When we create a new subdomain, its A record is set to the IP address of the main domain. My new subdomains are using the IP address of the main domain efcorebeginner.com.
 
-![subdomains a record](/images/subdomains-a-record-1.jpg "subdomains a record")
+![subdomains a record](/images/blog/subdomains-a-record-1.jpg "subdomains a record")
 
 Now edit the A record of person-api subdomain. Update the IP address and use the static IP of the Azure Ubuntu VM.
 
-![update a record](/images/update-a-record.jpg "update a record")
+![update a record](/images/blog/update-a-record.jpg "update a record")
 
 Repeat the same process with person-web subdomain. Edit A record of person-web subdomain and assign the new IP address of the Azure Ubuntu VM. Save the changes.
 
@@ -83,7 +83,7 @@ When the ping command shows the new IP address for the new subdomains, then we c
 
 This way the main domain and other subdomains will not be disturbed. We only update DNS settings of the new subdomains for our app.
 
-![ping subdomains new ip address](/images/ping-subdomains-new-IP-address-1024x394.jpg "ping subdomains new ip address")
+![ping subdomains new ip address](/images/blog/ping-subdomains-new-IP-address-1024x394.jpg "ping subdomains new ip address")
 
 ## SSH login on the Ubuntu Server VM and install Docker
 
@@ -96,7 +96,7 @@ ssh saqibrazzaq@person-api.efcorebeginner.com
 saqibrazzaq is the username that was specified in the Create new VM process on Azure website.
 person-api.efcorebeginner is the host where we want to login.
 
-![ssh login new vm](/images/ssh-login-new-vm-1024x762.jpg "ssh login new vm")
+![ssh login new vm](/images/blog/ssh-login-new-vm-1024x762.jpg "ssh login new vm")
 
 We can also do ssh user@ip.address. But IP addresses are hard to remember. So we use user@subdomain.com. Since our subdomain’s A record now uses the Ubuntu VM’s IP address, so ssh will open terminal to our new VM. For the first time, it will ask for confirmation to connect, type yes. It will ask for password, type your password that you gave when this VM was created on Azure. If everything is working fine, it will open the terminal of the Ubuntu server VM.
 
@@ -140,7 +140,7 @@ sudo docker ps
 
 The docker version command will show the version of Docker engine installed. And docker ps command will show the running containers. Since it is new installation, we don’t have any containers running.
 
-![docker version command](/images/docker-version-command-1024x650.jpg "docker version command")
+![docker version command](/images/blog/docker-version-command-1024x650.jpg "docker version command")
 
 ## Add Nginx reverse proxy and Letsencrypt companion containers to Docker
 
@@ -150,11 +150,11 @@ The docker version command will show the version of Docker engine installed. And
 
 In simple words, we can run multiple websites on same port 80/443 on a single IP address, with using Nginx reverse proxy. It is available on Docker hub at https://hub.docker.com/r/jwilder/nginx-proxy.
 
-![multiple sites with nginx reverse proxy](/images/Multiple-sites-with-Nginx-reverse-proxy.jpg "multiple sites with nginx reverse proxy")
+![multiple sites with nginx reverse proxy](/images/blog/Multiple-sites-with-Nginx-reverse-proxy.jpg "multiple sites with nginx reverse proxy")
 
 **With reverse proxy**, we can route requests for person-web.domain.com to container, on default port 80 or https/443. At the same time we can also route requests for person-api.domain.com to another container, on the same port 80/443. In fact, with reverse proxy, we can have n number of domains hosted on the same VM. We can access all domains using port 80/443 on the same VM.
 
-![multiple sites without nginx reverse proxy](/images/Multiple-sites-without-Nginx-reverse-proxy.jpg "multiple sites without nginx reverse proxy")
+![multiple sites without nginx reverse proxy](/images/blog/Multiple-sites-without-Nginx-reverse-proxy.jpg "multiple sites without nginx reverse proxy")
 
 **Without reverse proxy**, we can use only one port for one service. For example port 80 for person-web.domain.com, port 81 for person-api.domain.com, port 82 for another service and so on. That is how we did in our local Docker instance. We did not have any reverse proxy, so we were using localhost:8001 for API and localhost:8003 for React web app.
 
@@ -244,7 +244,7 @@ sudo docker network ls
 
 Use the docker network ls command to verify that the network is created.
 
-![docker create network](/images/docker-create-network-1024x190.jpg "docker create network")
+![docker create network](/images/blog/docker-create-network-1024x190.jpg "docker create network")
 
 Now its time to create the Nginx reverse proxy and LetsEncrypt companion. Run the following command
 
@@ -264,7 +264,7 @@ It will take some time depending on the network speed on the VPS. After the comm
 sudo docker ps
 ```
 
-![sudo docker ps](/images/sudo-docker-ps-1024x155.jpg "sudo docker ps")
+![sudo docker ps](/images/blog/sudo-docker-ps-1024x155.jpg "sudo docker ps")
 
 The Nginx reverse proxy with companion are installed and running, now will continue with our containers.
 
@@ -335,7 +335,7 @@ docker login
 
 It will ask for your credentials at hub.docker.com. You can create your account for free. Provide your username and password.
 
-![docker login](/images/docker-login-1024x221.jpg "docker login")
+![docker login](/images/blog/docker-login-1024x221.jpg "docker login")
 
 ### Push images to docker hub
 
@@ -347,7 +347,7 @@ docker compose push
 
 To verify that your images are pushed successfully, login on hub.docker.com and click on your Repositories. The two repositories should be listed there.
 
-![docker hub repositories](/images/docker-hub-repositories-1024x289.jpg "docker hub repositories")
+![docker hub repositories](/images/blog/docker-hub-repositories-1024x289.jpg "docker hub repositories")
 
 The above repositories are listed under my login and my user account. You should be able to see your own repositories when you login.
 
@@ -520,11 +520,11 @@ sudo docker compose -f person-app.yml up -d
 
 For the first time it will download the images from Docker hub to the Ubuntu Server on VPS and start the containers. If everything went well, you should be able to open the web API and React app in browser. It might take a minute for LetsEncrypt acme companion to request for the SSL certificates for both API and web app. If you get SSL error, try refreshing again after a minute. Below screenshot shows the API URL https://person-api.efcorebeginner.com/api/persons. You can replace it with your own subdomain.
 
-![person api from website](/images/person-api-from-website-1024x235.jpg "perosn api from website")
+![person api from website](/images/blog/person-api-from-website-1024x235.jpg "perosn api from website")
 
 Also open the React app at URL https://person-web.efcorebeginner.com/persons. If the process went smoothly, the app should work as shown in the screenshot below.
 
-![person react app from website](/images/person-react-app-from-website-1024x403.jpg "person react app from website")
+![person react app from website](/images/blog/person-react-app-from-website-1024x403.jpg "person react app from website")
 
 ## Update process on live website
 

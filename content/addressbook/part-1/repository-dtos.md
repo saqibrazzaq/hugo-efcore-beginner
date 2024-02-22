@@ -161,7 +161,7 @@ To get detailed explanation of the Search and sort implementation, please see [t
 
 At this stage, we have created the following files/folders in the API project.
 
-![address book structure after creating country repository](/images/address-book-structure-after-creating-country-repository.jpg "address book structure after creating country repository")
+![address book structure after creating country repository](/images/blog/address-book-structure-after-creating-country-repository.jpg "address book structure after creating country repository")
 
 You can check and verify from https://github.com/saqibrazzaq/efcorebeginner/tree/main/AddressBook.
 

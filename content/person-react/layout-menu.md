@@ -35,7 +35,7 @@ Visual Studio Code comes with a lot of extensions from the developer community, 
 
 Open src\layout\Footer.tsx. It will be empty by default. Type rafce, if the ES7 + React/Redux extension is installed, you will see the helper menu to add template code like below.
 
-![rafce](/images/rafce-1024x437.jpg "rafce")
+![rafce](/images/blog/rafce-1024x437.jpg "rafce")
 
 Press Enter on the **rafce – reactArrowFunctionExportComponent** to insert the default code. It will create the Footer functional component as below.
 
@@ -177,15 +177,15 @@ The function App should return the following now
 
 Now save the app and run using npm start. If your app is already running, the updates in code will automatically be applied in browser. The app should look like below for default home page.
 
-![default homepage](/images/default-homepage-1024x371.jpg "default homepage")
+![default homepage](/images/blog/default-homepage-1024x371.jpg "default homepage")
 
 The menu is very minimal, but elegant. The left most button is Home, which opens /. Persons and Add Persons are the menu items we set in TopNavBar. The rightmost icon is the color switcher. It is functional. Click on it to see its effect.
 
-![homepage night mode](/images/homepage-night-mode-1024x375.jpg "homepage night mode")
+![homepage night mode](/images/blog/homepage-night-mode-1024x375.jpg "homepage night mode")
 
 Resize the window to smaller width, it will open the mobile navigation menu like below. The layout and menu is responsive.
 
-![mobile homepage](/images/mobile-homepage.jpg "mobile homepage")
+![mobile homepage](/images/blog/mobile-homepage.jpg "mobile homepage")
 
 ## Add Home page
 
@@ -217,13 +217,13 @@ Now save and see the app in browser. You will see that localhost:3000 now shows 
 
 Note that we used Outlet in the Layout.tsx, which means the child components will be displayed in the place of Outlet. Below diagram may help in explaining this concept.
 
-![layout diagram](/images/layout-diagram-1024x328.jpg "layout diagram")
+![layout diagram](/images/blog/layout-diagram-1024x328.jpg "layout diagram")
 
 The / route uses the Layout.tsx, which is the outermost Route.
 
 All the other Routes that want to use the same layout, must be inside the main Route. All the inside Route elements will be rendered in place of the Outlet component.
 
-![home page](/images/home-page.jpg "home page")
+![home page](/images/blog/home-page.jpg "home page")
 
 The app in browser should now look like the screenshot above. localhost:3000 shows the content of Home component and uses the Layout.
 

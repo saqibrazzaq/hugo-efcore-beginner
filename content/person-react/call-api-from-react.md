@@ -83,7 +83,7 @@ And /persons should render Layout. In the Outlet part of Layout, /persons will a
 
 Run the project with npm start command. We already created top navigation menu and added /persons URL in the menu item. Click on it and you should see Persons component is rendered now.
 
-![persons component](/images/persons-component.jpg "person component")
+![persons component](/images/blog/persons-component.jpg "person component")
 
 ## Call Web API with Axios
 
@@ -129,7 +129,7 @@ Next it should also print the response from the web Api. We are calling https://
 
 If the Json response is not displayed, check the error message. In our case, we got the CORS error.
 
-![cors error](/images/cors-error-1024x273.jpg "cors error")
+![cors error](/images/blog/cors-error-1024x273.jpg "cors error")
 
 base url is highlighted in yellow, which is correct.
 
@@ -198,6 +198,6 @@ app.Run();
 
 Now stop and run the Web API project again. Stop and run the React client app again using npm start. Open localhost:3000 in browser and view Console log. It should now display the person list as follows.
 
-![cors fixed](/images/cors-fixed-1024x306.jpg "cors fixed")
+![cors fixed](/images/blog/cors-fixed-1024x306.jpg "cors fixed")
 
 At this point, we can successfully call our Web API methods from React app. In the next tutorial, we will build UI for showing the person list.

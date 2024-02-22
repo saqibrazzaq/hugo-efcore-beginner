@@ -14,7 +14,7 @@ npm -v
 
 Open terminal and change the directory where the Person.sln file exists. Person.sln is the Visual Studio solution file. You will see Person folder there, which contains Person project that created in Person Web API tutorial series. The ls command should show the following output.
 
-![ls command](/images/ls-command.jpg "ls command")
+![ls command](/images/blog/ls-command.jpg "ls command")
 
 We will create the new React app here. We will later deploy it to live website using Docker. We will create docker compose files to deploy both the API and React app, so if you want to deploy apps to your own website, keep the folder structure same.
 
@@ -34,11 +34,11 @@ cd react-app
 npm start
 ```
 
-![react command](/images/react-command.jpg "react command")
+![react command](/images/blog/react-command.jpg "react command")
 
 npm start will start the app and open the url http://localhost:3000 in the default browser. The default app will look like below.
 
-![react tsx app](/images/react-tsx-app-1024x474.jpg "react tsx app")
+![react tsx app](/images/blog/react-tsx-app-1024x474.jpg "react tsx app")
 
 ## Install npm packages in the default React app
 
@@ -131,6 +131,6 @@ npm start
 
 The app should run without any error and just display empty page.
 
-![empty react app](/images/empty-react-app-1024x266.jpg "empty react app")
+![empty react app](/images/blog/empty-react-app-1024x266.jpg "empty react app")
 
 In the next tutorial, we will add layout in our app and define header, footer and top navigation menu.

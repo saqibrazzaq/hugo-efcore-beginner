@@ -75,6 +75,6 @@ Follow the same pattern and create other controllers for city, state etc. You ca
 
 Debug or Run the project, it should build successfully and open the default Swagger UI on localhost. You can add new country, state, city, translation and timezones from the Swagger UI.
 
-![address book swagger](/images/address-book-swagger-1024x611.jpg "address book swagger")
+![address book swagger](/images/blog/address-book-swagger-1024x611.jpg "address book swagger")
 
 So far, we have one repository, one service and one controller for an entity. It is very simple. But in real world we have summary and detail reports, which includes reading data from multiple tables/entities. We have not created any summary or detail queries or reports yet. Lets first create UI for country, state and city, then we will create use cases where we will need data from multiple tables in our UI.

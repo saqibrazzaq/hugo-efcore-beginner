@@ -40,5 +40,5 @@ app.Run();
 
 Now run the project and open the Swagger default UI. Try the Get person API with an invalid id, you will now get the exact error message.
 
-![swagger api error](/images/swagger-api-error-1024x365.jpg "swagger api error")
+![swagger api error](/images/blog/swagger-api-error-1024x365.jpg "swagger api error")
 

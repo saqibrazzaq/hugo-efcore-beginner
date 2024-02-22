@@ -18,4 +18,4 @@ Add the following NuGet packages in the project.
 
 Check the packages from the below screenshot and verify that you have installed the correct packages.
 
-![nuget packages addressbook](/images/nuget-packages-addressbook.jpg "nuget packages addressbook")
+![nuget packages addressbook](/images/blog/nuget-packages-addressbook.jpg "nuget packages addressbook")

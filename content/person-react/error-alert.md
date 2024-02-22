@@ -15,7 +15,7 @@ In this article, you will learn how to handle errors and display on your list, c
 
 Lets take the edit person page as an example. Run both web API and the React client apps and open http://localhost:3000/persons/edit/1. If the person id 1 exists in the database, the form will be loaded with person’s data. If the person id 1 is not found, the form simply does not show anything. The page is silent, we don’t know what is wrong. As a developer, we can check console window to see the Axios exception as below.
 
-![axios error edit page](/images/axios-error-edit-page.jpg "axios error edit page")
+![axios error edit page](/images/blog/axios-error-edit-page.jpg "axios error edit page")
 
 The Axios library displays complete details about the error including status code, configuration, request and response details etc. It also contains the exception message we sent from the web API. We handled invalid person id in API project’s PersonService class. The error message “No person found with id: 1” is thrown in the method below.
 
@@ -36,7 +36,7 @@ The error starts propagating from web API’s service class, it passes on to the
 
 Now back to the browser console and find this error in Axios error log.
 
-![axios error response data](/images/axios-error-response-data.jpg "axios error response data")
+![axios error response data](/images/blog/axios-error-response-data.jpg "axios error response data")
 
 In Axios, the error message from the web API is found in response.data.error string. We will use this property whenever we receive error from the web API. Lets first display this error in console from the code. Open React project’s src\persons\PersonEdit.tsx and update the loadPerson method as follows.
 
@@ -56,7 +56,7 @@ const loadPerson = () => {
 
 Previously we were only using then(res) to get the response from API. It will only be executed if the API returns with success. If there is an error, we need to write catch(error) block. And we can get the exact error we received from the API, in error.response.data.error string. Save the file and try to edit person with invalid id like http://localhost:3000/persons/edit/133. Now check the console window.
 
-![axios display error console](/images/axios-display-error-console.jpg "axios display error console")
+![axios display error console](/images/blog/axios-display-error-console.jpg "axios display error console")
 
 The yellow highlighted error message is displayed using the catch(error) code.
 
@@ -88,7 +88,7 @@ const loadPerson = () => {
 
 Title is “Failed to get person”. In description we displayed the exact error message from the web API. Refresh the url with invalid id like http://localhost:3000/persons/edit/133, the result should look like as shown in the screenshot below.
 
-![get person toast error notification](/images/get-person-toast-error-notificattion-1024x482.jpg "get person toast error notification")
+![get person toast error notification](/images/blog/get-person-toast-error-notificattion-1024x482.jpg "get person toast error notification")
 
 ## Display error somewhere on the Page
 
@@ -182,7 +182,7 @@ In start of loadPerson, we reset the error. And in the catch(error) block, we se
 
 Save the file and run the React client app with invalid person id. It should display both error alert box and toast notification.
 
-![error with toast notification load person](/images/error-with-toast-notification-load-person.jpg "error with toast notification load person")
+![error with toast notification load person](/images/blog/error-with-toast-notification-load-person.jpg "error with toast notification load person")
 
 We can set the error wherever we call web API. We can add catch block in createPerson and updatePerson methods as follows.
 

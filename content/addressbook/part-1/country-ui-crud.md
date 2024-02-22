@@ -87,7 +87,7 @@ const searchCountries = () => {
 
 Save the file and run the project using npm start. Run the ASP.NET web API project as well, so that we can connect the React app with the API. Open the React app in browser, localhost:3000 and click on Countries link. Open Console tab in Chrome or any browser you are using. The app should call search countries API on page load, with default parameters. The console tab should also display the first page of countries returned from the API.
 
-![country first page console result](/images/countries-first-page-console-result-1024x255.jpg "countries first page console result")
+![country first page console result](/images/blog/countries-first-page-console-result-1024x255.jpg "countries first page console result")
 
 If there is an error, make sure that
 
@@ -136,7 +136,7 @@ return (
 
 Save the code and run the react project with npm start. It should display the countries that exist in the database.
 
-![address book react country search](/images/address-book-react-country-search.jpg "address book react country search")
+![address book react country search](/images/blog/address-book-react-country-search.jpg "address book react country search")
 
 ## Create and Edit Country page
 
@@ -370,13 +370,13 @@ return (
 
 Save the file and run the project using npm start. Now add a new country and try to delete a record, it should show the below interface.
 
-![delete country page](/images/delete-country-page.jpg "delete country page")
+![delete country page](/images/blog/delete-country-page.jpg "delete country page")
 
 ## Delete Country that has States
 
 Country and state has one to many relationship. A Country can have multiple states. State table has Country Id foreign key. Below is the entity diagram generated from SQL Server.
 
-![country state one to many relationship](/images/country-state-one-to-many-relationship.jpg "country state one to many relationship)
+![country state one to many relationship](/images/blog/country-state-one-to-many-relationship.jpg "country state one to many relationship)
 
 **What should happen if we delete a country?** There are multiple options.
 
@@ -418,11 +418,11 @@ Note that, even if we do not disable the button and call the Delete API, our web
 
 Now save the project and run it with npm start. Try to delete a country, which has some states, it will disable the delete button and show the error alert message as follows.
 
-![delete country which has states](/images/delete-country-whch-has-states.jpg "delete country which has states")
+![delete country which has states](/images/blog/delete-country-whch-has-states.jpg "delete country which has states")
 
 Then try to delete a Country, which has no state. It will now let you click on Delete button. No error message will be displayed.
 
-![delete country with no states](/images/delete-country-with-no-states.jpg "delete country with no states")
+![delete country with no states](/images/blog/delete-country-with-no-states.jpg "delete country with no states")
 
 You can get the complete code from the [GitHub repository](https://github.com/saqibrazzaq/efcorebeginner/blob/main/AddressBook/react-client/src/api/stateApi.js). To view the files directly, use the links below.
 

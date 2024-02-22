@@ -3,7 +3,7 @@ title: Change DateTime Format in ASP.NET Core Web API for JSON
 ShowToc: true
 TocOpen: true
 cover:
-  image: "/images/date-time-format.jpg"
+  image: "/images/blog/date-time-format.jpg"
   caption: "Photo by Panos Sakalakis on Unsplash"
 ---
 
@@ -20,7 +20,7 @@ I got the following output in my local system. The format is dd/MM/yyyy hh:mm:ss
 
 23/02/2023 10:50:03 am
 
-![date time output](/images/datetime-output-1024x190.jpg "date time output")
+![date time output](/images/blog/datetime-output-1024x190.jpg "date time output")
 
 If you run the same program in your system, you might get a different output. Since we used DateTime.Now, we did not specify any locale or format, so it picks the default System locale and date time format.
 
@@ -32,19 +32,19 @@ Open Settings in Windows 10/11, type date, it will show you options, choose “S
 
 Lets change is to English (United States) and run the program again. This settings has mm/dd/yyyy format. The AM/PM is in capital. hmmm. We had dd/mm/yyyy before and our am/pm was in small letters.
 
-![date time english united states](/images/date-time-english-united-states.jpg "date time english united states")
+![date time english united states](/images/blog/date-time-english-united-states.jpg "date time english united states")
 
 When I change to above settings in Windows, run my program, it shows the updated format now.
 
-![english united states program output](/images/english-united-states-program-output-1024x178.jpg "english united states program output")
+![english united states program output](/images/blog/english-united-states-program-output-1024x178.jpg "english united states program output")
 
 Lets change it to English (Sweden). In Windows settings you will now see that it has yyyy-mm-dd format. There is no am/pm in time.
 
-![english sweden](/images/english-sweden.jpg "english sweden")
+![english sweden](/images/blog/english-sweden.jpg "english sweden")
 
 Lets run our C# program again, with the same default DateTime.Now output. As expected, it honors the Windows settings.
 
-![english sweden program output](/images/english-sweden-program-output-1024x176.jpg "english sweden program output")
+![english sweden program output](/images/blog/english-sweden-program-output-1024x176.jpg "english sweden program output")
 
 ## Different Output of Same Program on Local, Staging, Live systems
 
@@ -131,7 +131,7 @@ dateOfBirth: "2019-09-20T12:50:10"
 
 The Chakra UI will parse and display the correct value in the input box. It will also open the default date time picker.
 
-![chakra ui date time](/images/chakra-ui-date-time.jpg "chakra ui date time")
+![chakra ui date time](/images/blog/chakra-ui-date-time.jpg "chakra ui date time")
 
 ## Conclusion
 

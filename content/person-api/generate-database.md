@@ -60,7 +60,7 @@ In local system, when you run/debug project, it will read your local PC’s envi
 
 So we use another NuGet package [DotNetEnv](https://www.nuget.org/packages/DotNetEnv/). It solves our problem elegantly. We don’t have to edit system variables. We keep all confidential information in a .env file. Install this package in your project using NuGet.
 
-![DotNetEnv Nuget](/images/dotnetenv-nuget.jpg "DotNetEnv Nuget")
+![DotNetEnv Nuget](/images/blog/dotnetenv-nuget.jpg "DotNetEnv Nuget")
 
 Now create a new file in project root create a new file **{your-name}.env**. It could be your name, your PC name or any name. This file will contain all confidential information. I have named my file as **saqib-laptop.env**. It has following text.
 
@@ -97,7 +97,7 @@ The environment file will not be committed to git. It is personal for each team 
 - Local system: Confidential information will be loaded from the .env file.
 - The same System.GetEnvironmentVariable(“SQLSERVER”) will work with both system variables and .env files.
 
-![DotNetEnv project](/images/dotenv-project.jpg "DotNetEnv project")
+![DotNetEnv project](/images/blog/dotenv-project.jpg "DotNetEnv project")
 
 Note that red symbol with .env file, that means this file is not uploaded on GitHub or any other repository.
 
@@ -155,7 +155,7 @@ It will also execute the create table scripts to create Person table, which is t
 
 At this time, you can also verify by connecting to the database using SQL Server Management Studio, that the database and table is created.
 
-![database created](/images/database-created-1024x372.jpg "database created")
+![database created](/images/blog/database-created-1024x372.jpg "database created")
 
 Congratulations!! if you can also see the new database and table created in SQL Server.
 

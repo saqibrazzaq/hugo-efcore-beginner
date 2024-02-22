@@ -50,7 +50,7 @@ In one line, we created a new Person with the service. And in the second line we
 
 Run the project, it will open the Swagger UI by default. Since a web API is pure backend web service, we need a client, another app to test it. Visual Studio by default provides Swagger UI to test the APIs. You should see Persons controller and one post method like below.
 
-![swagger](/images/swagger-1024x544.jpg "swagger")
+![swagger](/images/blog/swagger-1024x544.jpg "swagger")
 
 Click on the Post link, it will show Example value and schema. If you post an API on public server, the request parameters are exposed to public. If we did not have DTOs, we would have used Entities as parameter and return types. This way the schema can be exposed to the public, which is very bad practice. That is why we used DTOs.
 
@@ -94,11 +94,11 @@ Any class that needs to be used via the dependency injection, must be registered
 
 Now run the project, click on the Post link, then **Try it** out button. Keep the data as it is. Click on the **Execute** button at the bottom. Scroll down and you should now see server response 200 Ok as below.
 
-![create person swagger](/images/create-person-swagger-1024x548.jpg "create person swagger")
+![create person swagger](/images/blog/create-person-swagger-1024x548.jpg "create person swagger")
 
 200 Ok means the API executed successfully. New person is now created in the database. Open the SQL Server Management Studio, connect to the database and run the following query to verify the data.
 
-![sql person select](/images/sql-person-select.jpg "sql person select")
+![sql person select](/images/blog/sql-person-select.jpg "sql person select")
 
 Congratulations!! you have successfully created a new record in SQL Server using the Entity Framework with good design practices.
 
@@ -106,7 +106,7 @@ Congratulations!! you have successfully created a new record in SQL Server using
 
 At this stage, I would recommend you to take a break and spend some time debugging the code.
 
-![person create debug](/images/person-create-debug.jpg "person create debug")
+![person create debug](/images/blog/person-create-debug.jpg "person create debug")
 
 The HttpPost method takes PersonReqEdit as parameter. This parameter is shown in swagger and based on this DTO public members, swagger displays in the request body
 
@@ -123,7 +123,7 @@ This data is sent from Swagger to the controller, in PersonReqEdit dto.
 
 The controller uses Person Service and just calls service’s Create method. It passes the same dto, which it received from swagger client.
 
-![person debug service](/images/person-debug-service.jpg "person debug service")
+![person debug service](/images/blog/person-debug-service.jpg "person debug service")
 
 The service receives the Dto from controller. It is the job of service to use the Repository manager and do CRUD operation as required. It converts the Dto to the database entity. Once we get an entity, we can insert it in the Repository. Save method will actually save the data from the entity class to the SQL Server database.
 

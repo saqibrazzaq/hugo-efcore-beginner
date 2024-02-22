@@ -13,7 +13,7 @@ All labels are same, having Id and label fields. In this article, we will create
 
 Lets start with the search page. Create a new file PhoneLabels.tsx in src\settings\phone-labels folder. Type rafce and enter the default code. In the end the search page will look like below.
 
-![phone label search](/images/phone-label-search.jpg "phone label search")
+![phone label search](/images/blog/phone-label-search.jpg "phone label search")
 
 First we will create some state variables.
 
@@ -100,7 +100,7 @@ You can get the complete code from [GitHub](https://github.com/saqibrazzaq/efcor
 
 Create a new file PhoneLabelEdit.tsx in src\settings\phone-labels folder. Type rafce and enter the default template code. The page will look like below
 
-![phone label edit](/images/phone-label-edit.jpg "phone label edit")
+![phone label edit](/images/blog/phone-label-edit.jpg "phone label edit")
 
 First we get the phoneLabelId from url params. If id is present in the url, then it means we are editing, otherwise we are creating a new label. Below is the Url format.
 
@@ -316,7 +316,7 @@ We will not discuss the code for displayHeading, error and showAlertDialog metho
 
 But we will present the code for showPhoneLabel. It shows the phone label information to the user. It also shows Yes/No in Any Phone, so that user should know that this label is being used in phone numbers and cannot be deleted. If this phone is used, it will print “Yes”. In case of Yes, it will also show an error alert box with title and description, telling the user that this phone label is being used in phone numbers. The state variable anyPhone is also used to disable the Delete button on the page.
 
-![phone label delete yes](/images/phone-label-delete-yes.jpg "phone label delete yes")
+![phone label delete yes](/images/blog/phone-label-delete-yes.jpg "phone label delete yes")
 
 ```react
 const showPhoneLabel = () => (

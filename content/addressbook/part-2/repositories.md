@@ -204,7 +204,7 @@ We have called Include method, to get data from child tables of Contact. Include
 
 Why Take(1)? Lets have a look at the following screenshot first, to see the requirement.
 
-![contact search include related data](/images/contact-search-include-related-data.jpg "contact search include related data")
+![contact search include related data](/images/blog/contact-search-include-related-data.jpg "contact search include related data")
 
 Our Contact search screen will look like above. It is implemented in React. React will call Axios API helper method to call /contacts/search web API, which will call the controller, then ContactService, then the request will finally reach the ContactRepository.Search extension method. ProfilePicture Url, First Name and Last Name are available in the ContactRepository. A contact may have 0 or many email addresses, 0 or many phone numbers. But we only need one email and one phone to display in the search page. So that is why we chain Include method with Take, to get the first record only.
 
@@ -224,7 +224,7 @@ If search params have LabelId, then we match it with the label Id in the Contact
 
 Have a look at the database relation diagram again.
 
-![contact label match labelid](/images/Contact-Label-match-labelId.jpg "contact label match labelid")
+![contact label match labelid](/images/blog/Contact-Label-match-labelId.jpg "contact label match labelid")
 
 If we were using SQL and we would like to get all Contacts whose labelId is 1, the SQL would have been like below.
 
@@ -252,7 +252,7 @@ If we want to add where condition which matches with fields of same table, it is
 
 To get clear idea, see the gif animation below.
 
-![contact search phone email](/images/contact-search-phone-email.gif "contact search phone email")
+![contact search phone email](/images/blog/contact-search-phone-email.gif "contact search phone email")
 
 First we search 7000 in the search field. It matches with ContactPhone.Phone field with x.ContactPhones.Any(), because the child table has multiple phone numbers, so we first use Any() method, then match with ph => ph.Phone field.
 
@@ -327,7 +327,7 @@ It includes two related tables, Country and PhoneLabel. A phone may have an opti
 
 The search params has ContactId required field, we match it with ContactPhone.ContactId in the Where condition.
 
-![phone country code label](/images/phone-country-code-label.jpg "phone country code label")
+![phone country code label](/images/blog/phone-country-code-label.jpg "phone country code label")
 
 Just like we created the interface, class and extension methods for the Contact Phone repository, you can go ahead and create the repository classes for the rest of the properties. These are listed below.
 

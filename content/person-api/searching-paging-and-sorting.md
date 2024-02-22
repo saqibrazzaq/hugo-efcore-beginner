@@ -253,7 +253,7 @@ public static class PersonRepositoryExtensions
 Build the project, you will still get errors on OrderBy method. For this to work, we need to install System.Linq.Dynamic.Core by ZZZ.
 
 
-![system linq dynamic core](/images/system.linq_.dynamic.core_-1024x96.jpg "system linq dynamic core")
+![system linq dynamic core](/images/blog/system.linq_.dynamic.core_-1024x96.jpg "system linq dynamic core")
 
 After installing this NuGet package, add its reference on top.
 
@@ -303,7 +303,7 @@ The method in controller is really simple as other methods we wrote previously. 
 
 Run the project, it will open the default Swagger UI. Now you should see total 7 methods, including the new Search method.
 
-![search api](/images/search-api-1024x474.jpg "search api")
+![search api](/images/blog/search-api-1024x474.jpg "search api")
 
 Click on search, try it out, try different parameters in the Search and see how it works.
 

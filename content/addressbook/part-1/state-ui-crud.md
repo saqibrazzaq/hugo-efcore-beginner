@@ -229,17 +229,17 @@ The rest of the code needs no explanation, as there is nothing new. You can get 
 
 See the gif below, we created some countries and states. We are filtering states with country id and page navigation, the Url is updating, which is causing the search results to refresh. After filtering, when we click on Edit or Delete page, then press the browser back button, we go back to the exact Url where we left off. Our search filter is kept. We don’t have to search all over again.
 
-![states navigation url params](/images/states-navigation-url-params-1024x754.gif "states navigation url params")
+![states navigation url params](/images/blog/states-navigation-url-params-1024x754.gif "states navigation url params")
 
 ## Workflow summary
 
 When we select country from dropdown, it updates the Url search params. When we press enter on search textbox, it updates Url params. When we click on search button, it updates the Url params. When we click on previous or next page, it will again update the Url params.
 
-![states workflow summary](/images/states-workflow-summary-1024x466.jpg "states workflow summary")
+![states workflow summary](/images/blog/states-workflow-summary-1024x466.jpg "states workflow summary")
 
 The state search web API is called in useEffect hook. The useEffect hook is executed when searchParams value is updated. This is the only way we call the search web API, no other event calls the search API.
 
-![states workflow search params](/images/states-workflow-search-param-724x1024.jpg "states workflow search params")
+![states workflow search params](/images/blog/states-workflow-search-param-724x1024.jpg "states workflow search params")
 
 ## Create and Edit State page
 
@@ -342,7 +342,7 @@ Lets create the form now with Formik. In the form, we will have hidden input fie
 
 The complete code of StateEdit.tsx is at [GitHub](https://github.com/saqibrazzaq/efcorebeginner/blob/main/AddressBook/react-client/src/pages/state/StateEdit.tsx). You can either get the complete code from GitHub or complete the edit page yourself. Save the file and run the project with npm start. Create new state in a country or update an existing state, it should work.
 
-![edit state](/images/edit-state.jpg "edit state")
+![edit state](/images/blog/edit-state.jpg "edit state")
 
 ## Delete State
 
@@ -405,7 +405,7 @@ builder.Services.AddControllers(config =>
 
 Now stop the web API project and run it again. Open the default Swagger UI, go to the States section and click on /api/States/{stateId}. Enter a valid state id and check the result, it should now contain country data as well.
 
-![state contains country](/images/state-contains-country-1024x544.jpg "state contains country")
+![state contains country](/images/blog/state-contains-country-1024x544.jpg "state contains country")
 
 Lets come to the React project now. Open the src\dtos\State.ts and view StateRes dto. It contains CountryRes. Now that our web API includes Country data in state, it should also be loaded in React dto.
 
@@ -437,4 +437,4 @@ We will also include city count here and show it in the table. If there are any 
 
 Run the project with npm start, delete a state, it will now show Country information, because we have used Include in Entity Framework repository, which gets data from related tables.
 
-![delete state which has cities](/images/delete-state-which-has-cities.jpg "delete state which has cities")
+![delete state which has cities](/images/blog/delete-state-which-has-cities.jpg "delete state which has cities")

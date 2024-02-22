@@ -56,7 +56,7 @@ var itemsToReturn = items
 
 When we call the Contact search API and print the output in console, it will show the following results. Note that contactEmails and contactPhones arrays have only 1 item. Other arrays contactAddresses, contactChats, contactLabels and contactWebsites have 0 items. There might be record in the database, but in response there are 0, because we did not include in the Search method in repository.
 
-![contact search console](/images/contact-search-console.jpg "contact search console")
+![contact search console](/images/blog/contact-search-console.jpg "contact search console")
 
 ### Display Profile Picture in Table
 
@@ -72,7 +72,7 @@ You can refer to GitHub repository for complete code.
 
 Below is the screenshot of the search contacts page.
 
-![contact search](/images/contact-search.jpg "contact search")
+![contact search](/images/blog/contact-search.jpg "contact search")
 
 ## Create or Edit Contact Page
 
@@ -239,21 +239,21 @@ const showUpdateForm = () => (
 
 If you create a new contact with url http://localhost:3000/contacts/edit, it will display the page as follows. It displays empty form, there is no contactId in the Url, so no contact data is loaded from the web API.
 
-![create new contact](/images/create-new-contact-1024x746.jpg "create new contact")
+![create new contact](/images/blog/create-new-contact-1024x746.jpg "create new contact")
 
 If you try to edit an existing contact, it will load the form with data. The only required field is first name, so the contact can be saved. The phone numbers, emails, addresses etc are optional, so it is perfectly fine to save the contact with just first name and Contact direct fields.
 
-![edit contact direct fields](/images/edit-contact-direct-fields-1024x718.jpg "edit contact direct fields")
+![edit contact direct fields](/images/blog/edit-contact-direct-fields-1024x718.jpg "edit contact direct fields")
 
 ### Contact Header with Profile Picture Display
 
 Take a look at the below screenshot, it is taken from Google Contacts. We have created a temporary contact and assigned a profile picture to it. When we click on the contact it displays profile picture with name and company details on top. The interface looks very beautiful.
 
-![google contact view contact profile picture](/images/google-contact-view-contact-profile-picture.jpg "google contact view contact profile picture")
+![google contact view contact profile picture](/images/blog/google-contact-view-contact-profile-picture.jpg "google contact view contact profile picture")
 
 What if we remove the profile picture and company details from this contact, how it will look? It might look similar to our app, just plain text, no design, no image, it will be plain boring, just like our app.
 
-![edit contact without profile picture](/images/edit-contact-without-profile-picture.jpg "edit contact without profile picture")
+![edit contact without profile picture](/images/blog/edit-contact-without-profile-picture.jpg "edit contact without profile picture")
 
 So we will also add profile picture with name and company details. Lets see how it improves our edit contact page.
 
@@ -350,7 +350,7 @@ const showUpdateForm = () => (
 
 Save the files and run the project with npm start. Edit a contact and you will now see the profile picture with some contact details.
 
-![edit contact with profile picture](/images/edit-contact-with-profile-picture.jpg "edit contact with profile picture")
+![edit contact with profile picture](/images/blog/edit-contact-with-profile-picture.jpg "edit contact with profile picture")
 
 ### Update Profile Picture of Contact
 
@@ -459,7 +459,7 @@ We also need a button or link to upload the image. We can create a new button or
 
 Now edit a contact and click on the profile picture. It will show the existing profile picture and contact details. It will also display the react drop zone area for updating new image. When we select a new image and upload the profile picture, the web API will be called, which is using Cloudinary storage. The profile picture will be uploaded to the Cloudinary and Contact table’s pictureUrl field will also be updated.
 
-![profile picture update](/images/profile-picture-update.jpg "profile picture update")
+![profile picture update](/images/blog/profile-picture-update.jpg "profile picture update")
 
 ### Show Labels, Phones, Emails, Addresses, Chats and Websites in Edit Contact Page
 
@@ -599,7 +599,7 @@ const loadContactAddresses = () => {
 
 In this article we have defined method showContactPhones, which displays the phone numbers in table. You may work on the other methods in the same pattern and display the emails, addresses, labels, chats and websites.
 
-![edit contact show related data empty](/images/edit-contact-show-related-data-empty.jpg "edit contact show related data empty")
+![edit contact show related data empty](/images/blog/edit-contact-show-related-data-empty.jpg "edit contact show related data empty")
 
 Take some time in building this page, it might seem complex and it includes information from the related tables. It will take more time to develop this page. You may also refer to the [GitHub repository](https://github.com/saqibrazzaq/efcorebeginner/tree/main/AddressBook/react-client) for the complete code if you are stuck somewhere or having errors.
 
@@ -611,7 +611,7 @@ Lets first look again at the Google Contacts edit page. Google Contacts app is v
 
 If we follow the same pattern, our app will become more complex, we will have to add and remove the form controls dynamically on client side. It is easy for the end user, but little hard to develop. So in our app, we just displayed the phone numbers, but for editing, we will create separate pages. May be in the next version we will update the UI and handle all the related data updates in the same edit contact page. We will keep this improvement for future.
 
-![google contact edit page](/images/google-contact-edit-page.jpg "google contact edit page")
+![google contact edit page](/images/blog/google-contact-edit-page.jpg "google contact edit page")
 
 Lets create the edit contact phone page. Create a new file ContactPhoneEdit.tsx in src\pages\contact folder and type rafce to insert the template code.
 
@@ -789,18 +789,18 @@ const showUpdateForm = () => (
 
 Now when we edit the existing phone number, we will get the following interface.
 
-![edit contact phone](/images/edit-contact-phone.jpg "edit contact phone")
+![edit contact phone](/images/blog/edit-contact-phone.jpg "edit contact phone")
 
 You can create the remaining 5 edit pages in the same pattern, we will not go into the details of each page, as it would take too much space here in one article. The complete code of the project is available at [GitHub](https://github.com/saqibrazzaq/efcorebeginner/tree/main/AddressBook/react-client) for your reference.
 
 After completing the edit and delete pages for contact phone, email, address, chat, label and website, and entering some data, the edit contact page will finally look like below.
 
-![edit contact with all related data](/images/edit-contact-with-all-related-data-939x1024.jpg "edit contact with all related data")
+![edit contact with all related data](/images/blog/edit-contact-with-all-related-data-939x1024.jpg "edit contact with all related data")
 
 ## Delete Contact Page
 
 The delete contact page will just show the contact profile picture and some details, it will open confirmation dialog box. The contact will be delete only when the user clicks on Confirm Delete button. Below is the screenshot of the Delete contact page.
 
-![delete contact](/images/delete-contact-1024x593.jpg "delete contact")
+![delete contact](/images/blog/delete-contact-1024x593.jpg "delete contact")
 
 We have written many delete pages in the previous articles. Delete Contact page is not special, so we will not write the code code here. You may continue to write yourself or view from the [GitHub repository](https://github.com/saqibrazzaq/efcorebeginner/tree/main/AddressBook/react-client).

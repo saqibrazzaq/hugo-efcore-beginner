@@ -46,15 +46,15 @@ Controller methods will be the simplest, they act as only endpoint for Web API. 
 
 Run the project, it will open the Swagger default UI. Now you should see two methods in the Swagger page as follows.
 
-![swagger get all](/images/swagger-getall-1024x596.jpg "swagger get all")
+![swagger get all](/images/blog/swagger-getall-1024x596.jpg "swagger get all")
 
 Open the **Get /api/Persons**, click on **Try it out** button and click **Execute**. You should now see 200 Ok response from server. And in response body, you should see the list of all the persons which exist in the database.
 
-![swagger get all response](/images/swagger-getall-response-1024x446.jpg "swagger get all response")
+![swagger get all response](/images/blog/swagger-getall-response-1024x446.jpg "swagger get all response")
 
 You can also copy the URL and open it in any browser. The browser will call the API and load the Json response, containing all the persons.
 
-![get all browser json](/images/getall-browser-json.jpg "get all browser json")
+![get all browser json](/images/blog/getall-browser-json.jpg "get all browser json")
 
 ## Get Single Person
 
@@ -116,7 +116,7 @@ In this Get method, we use **“{personId}”** in annotation and then used **in
 
 Run the project, it will open the Swagger UI. Now you will see the 3rd method
 
-![swagger get](/images/swagger-get-1024x233.jpg "swagger get")
+![swagger get](/images/blog/swagger-get-1024x233.jpg "swagger get")
 
 Click on **Get /api/Persons/{personId}**, click on **Try it out**. Note the text box now. Swagger UI has provided a textbox to set the personId variable value. Try giving different values and execute the method.
 
@@ -186,7 +186,7 @@ For update, we use HttpPut method in Web APIs. The person Id is present in the a
 
 Run the project, it will open the Swagger API. Now you will see 4th method, which is Put. Click on it.
 
-![swagger put](/images/swagger-put-1024x305.jpg "swagger put")
+![swagger put](/images/blog/swagger-put-1024x305.jpg "swagger put")
 
 Now the Swagger UI will ask for input data for both the variables.
 
@@ -199,7 +199,7 @@ The default template value for the request dto is already provided by Swagger UI
 
 Pass some wrong id in personId, and you will get the exception message.
 
-![swagger update](/images/swagger-update-1024x374.jpg "swagger update")
+![swagger update](/images/blog/swagger-update-1024x374.jpg "swagger update")
 
 You can verify the results by querying to SQL Server or by using the Get method from the Swagger UI.
 
@@ -239,7 +239,7 @@ The Delete method has nothing to return, so we just return NoContent() as respon
 
 Run the project, Swagger default UI will open. You will see the 5th Delete method is now added in the method list.
 
-![swagger delete](/images/swagger-delete-1024x353.jpg "swagger delete")
+![swagger delete](/images/blog/swagger-delete-1024x353.jpg "swagger delete")
 
 Click on it and then Try it out. You will see only one textbox for personId parameter. Enter 1 in personId and Execute, the record will be deleted from the database. And if you enter 1 again and Execute, it will throw the exception that no person found.
 

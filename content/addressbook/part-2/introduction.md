@@ -25,4 +25,4 @@ Now in the second part, we will develop the contact manager app. It is inspired 
 - Delete contact will also delete contact’s child records e.g. contact’s phone, chat, website, addresses etc.
 - Contact’s address contains CityId, which was created in first part. Deleting city will display number of addresses. You cannot delete a city, if it is used in an address.
 
-![contacts main page](/images/contacts-main-page.jpg "contacts main page")
+![contacts main page](/images/blog/contacts-main-page.jpg "contacts main page")

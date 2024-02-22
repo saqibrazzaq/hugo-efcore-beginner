@@ -81,7 +81,7 @@ Lets have a look at the database diagram for ContactPhone again. A Contact may h
 
 ContactPhone has its own Id as primary key, Phone for storing the actual phone number. The phone number must belong to a Contact, so it has Contact Id field. A phone number may have an optional label, so it has PhoneLabelId field. A phone number may also have an optional Country Code, so it has CountryId field.
 
-![phone label database design 1](/images/phone-label-database-design-1.jpg "phone label database design 1")
+![phone label database design 1](/images/blog/phone-label-database-design-1.jpg "phone label database design 1")
 
 As we created the Dtos for ContactPhone in ASP.NET Core, we will the same in the React app. Below is the code for the 3 Dtos of ContactPhone.
 

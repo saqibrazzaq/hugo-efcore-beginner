@@ -3,7 +3,7 @@ title: How to display error message in React
 ShowToc: true
 TocOpen: true
 cover:
-  image: "/images/error-message-react.jpg"
+  image: "/images/blog/error-message-react.jpg"
   caption: "Photo by Goh Rhy Yan on Unsplash"
 ---
 
@@ -49,10 +49,10 @@ function App() {
 
 When page is loaded, errorMessage value will be empty, the error message will not be displayed.
 
-![react error message page load](/images/react-error-message-page-load.jpg "react error message page load")
+![react error message page load](/images/blog/react-error-message-page-load.jpg "react error message page load")
 
 Click on **Do Something** button. You can call an API or do some other operation in this method. Handle error in catch block. If error occurs, set the error message state variable. When errorMessage value is updated, React will render the <p> again with the updated value and the error message will be displayed on screen.
 
-![react error message on button click](/images/react-error-message-on-button-click.jpg "react error message on button click")
+![react error message on button click](/images/blog/react-error-message-on-button-click.jpg "react error message on button click")
 
 When you clear the error, set errorMessage state variable to empty string, React will render the component again and error message will not be displayed because of && operator between errorMessage and <p>.

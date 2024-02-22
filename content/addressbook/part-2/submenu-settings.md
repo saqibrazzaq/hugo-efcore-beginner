@@ -17,7 +17,7 @@ So far we have main layout defined in Layout.tsx. All pages use this layout file
 
 Lets take example of the Country page. Have a look at the screenshot below.
 
-![main layout country example](/images/main-layout-country-example.jpg "main layout country example")
+![main layout country example](/images/blog/main-layout-country-example.jpg "main layout country example")
 
 
 The Country.tsx page uses the main layout, so in the layout, React replaces the contents of Country.tsx with the Outlet.
@@ -32,7 +32,7 @@ The Urls work as below
 - /countries – will render the main layout, and render countries.tsx in the Outlet
 - /cities – will render the main layout, and render the cities.tsx in the Outlet
 
-![routes main layout country state](/images/Routes-main-layout-country-state.jpg "routes main layout country state")
+![routes main layout country state](/images/blog/Routes-main-layout-country-state.jpg "routes main layout country state")
 
 ## The Settings Layout
 
@@ -81,7 +81,7 @@ You will get error on LeftSideMenu and LinkItemProps. You can get the LeftSideMe
 
 The settings layout consists of 3 sections in horizontal direction. The main layout has 3 sections in vertical direction, because it has top menu, center content and footer at bottom. Whereas in the settings layout, we need left side menu, a separator and content at the right side. See the screenshot below.
 
-![left side menu layout](/images/left-side-menu-layout-1024x575.jpg "left side menu layout")
+![left side menu layout](/images/blog/left-side-menu-layout-1024x575.jpg "left side menu layout")
 
 The menu items are created in the SettingsLayout.tsx page as array of type LinkItemProps. LinkItemProps has 3 members.
 
@@ -95,6 +95,6 @@ The settings layout will have 6 children for the label types. In App.tsx, the hi
 - /settings – Layout.tsx + SettingsLayout.tsx (in Outlet)
 - /settings/phone-labels – Layout.tsx + SettingsLayout.tsx (in Outlet) + phoneLabels.tsx (in Outlet)
 
-![settings layout routing](/images/settings-layout-routing.jpg "settings layout routing")
+![settings layout routing](/images/blog/settings-layout-routing.jpg "settings layout routing")
 
 Complete code can be downloaded from this [GitHub repository](https://github.com/saqibrazzaq/efcorebeginner/tree/main/AddressBook).

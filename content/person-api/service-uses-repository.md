@@ -194,7 +194,7 @@ AutoMapper.Extensions.Microsoft.DependencyInjection
 
 Below is the screenshot of this NuGet package. Make sure that you install the correct package with Dependency Injection.
 
-![automapper](/images/automapper-1024x106.jpg "automapper")
+![automapper](/images/blog/automapper-1024x106.jpg "automapper")
 
 There are 129M downloads of this package. It is very popular and commonly use for transformation of Dtos into entities and vice versa.
 

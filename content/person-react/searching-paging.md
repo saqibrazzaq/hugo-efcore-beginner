@@ -15,11 +15,11 @@ Before you start implementing paging, I would recommend to add at least 20 perso
 
 Run the web API project and open the default Swagger UI. Get All method does not require any parameter, we do not require any DTO for get all
 
-![web api get all no parameters](/images/web-api-get-all-no-parameters-1024x181.jpg "web api get all no parameters")
+![web api get all no parameters](/images/blog/web-api-get-all-no-parameters-1024x181.jpg "web api get all no parameters")
 
 Now check the search method that we implemented. It takes parameters so that client can pass search string, page number to fetch and other search criteria.
 
-![web api search with parameters](/images/web-api-search-with-parameters-1024x525.jpg "web api search with parameters")
+![web api search with parameters](/images/blog/web-api-search-with-parameters-1024x525.jpg "web api search with parameters")
 
 It has total 5 parameters. 4 out of 5 parameters are common. We created a common PagedReq DTO for this in our web API. Then created Person search request dto which inherits the common class.
 
@@ -252,11 +252,11 @@ pagedRes?.pagedList?.map
 
 Save the file and see the updates in the Person List page at http://localhost:3000/persons. It should display just 5 records now, because we have set default page size to 5. It should also display the search textbox after the heading as shown in the screenshot below.
 
-![replace get all with search](/images/replace-get-all-with-search.jpg "replace get all with search")
+![replace get all with search](/images/blog/replace-get-all-with-search.jpg "replace get all with search")
 
 Type something in search textbox, press Enter or search button, the search should work.
 
-![search textbox](/images/search-textbox.jpg "search textbox")
+![search textbox](/images/blog/search-textbox.jpg "search textbox")
 
 ### Add Previous and Next page navigation links
 
@@ -318,6 +318,6 @@ Button component is used to display both the Next and Previous links. Previous b
 
 Save the file and check updates in the person list page. We have now implemented searching and paging in this React component. Try next and previous links and use search, it should work now.
 
-![searching and paging with persons](/images/searching-and-paging-in-persons.jpg "searching and paging with persons")
+![searching and paging with persons](/images/blog/searching-and-paging-in-persons.jpg "searching and paging with persons")
 
 If it does not work and shows error, please check the source file at https://github.com/saqibrazzaq/efcorebeginner/blob/main/Person/react-client/src/persons/Persons.tsx.

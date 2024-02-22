@@ -42,7 +42,7 @@ We are building an ASP.NET Web API application, which gives is the default Weath
 
 Remember the layered pattern diagram?
 
-![Repository pattern](/images/Repository-pattern.jpg "Repository pattern")
+![Repository pattern](/images/blog/Repository-pattern.jpg "Repository pattern")
 
 We will write Services, which will use our Repository classes.
 

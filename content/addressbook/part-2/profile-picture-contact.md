@@ -25,7 +25,7 @@ We did not choose database for storing images, because database like SQL Server 
 
 We chose Cloudinary because it comes with a [free account](https://cloudinary.com/pricing). At the time of writing this article, it is 10th Feb, 2023, they allow 25 free monthly credits, which means 25k monthly image transformations and 25GB storage, which is good enough for a small sized startup or even small business. It is very helpful and suitable for developers, who can use Cloudinary for hosting images and test their apps. Amazon also has free tier, but Cloudinary is specialized in [image processing](https://cloudinary.com/documentation/image_transformations). Specially the auto detection of face from a picture is extremely useful feature for profile pictures.
 
-![edit contact profile picture](/images/edit-contact-profile-picture.jpg "edit contact profile picture")
+![edit contact profile picture](/images/blog/edit-contact-profile-picture.jpg "edit contact profile picture")
 
 ## Image Fields in Contact Entity
 
@@ -140,7 +140,7 @@ Now we will go ahead and continue with the service implementation, which will us
 
 Make sure that CloudinaryDotNet official package is installed and updated with the latest version.
 
-![nuget cloudinary](/images/nuget-cloudinary.jpg "nuget cloudinary")
+![nuget cloudinary](/images/blog/nuget-cloudinary.jpg "nuget cloudinary")
 
 ```cs
 public class CloudinaryService : ICloudinaryService

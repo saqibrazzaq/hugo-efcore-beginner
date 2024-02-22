@@ -3,7 +3,7 @@ title: Built-in API rate limiter, new in .NET 7
 ShowToc: true
 TocOpen: true
 cover:
-  image: "/images/api-rate-limit-net-7.jpg"
+  image: "/images/blog/api-rate-limit-net-7.jpg"
   caption: "Photo by Ksenia Kudelkina on Unsplash"
 ---
 
@@ -19,7 +19,7 @@ It is available as middleware and can easily added to the service collection. Yo
 
 Create a new project of type ASP.NET Core Web API in Visual Studio 2022. Choose .NET 7.0 in framework, as this feature is only introduced in .NET 7. It is not available in .NET 6. Leave other options as default.
 
-![new project web api](/images/new-project-asp.net-core-web-api-1024x530.jpg "new project web api")
+![new project web api](/images/blog/new-project-asp.net-core-web-api-1024x530.jpg "new project web api")
 
 Add a new folder named **Extensions**. In this folder add a new class **ServiceExtensions**. Modify the class to make it static. We will define the extension method here, which requires a static class. Add the new method as follows.
 
@@ -70,11 +70,11 @@ app.Run();
 
 Run the API, it will open the default Swagger UI. Execute the default WeatherForecast GET method continuously. It will work first 10 times. 11th time, it will return 503 error response. The controller method will not be executed. You have to wait for 1 minute, before you can do another request. Wait for 1 minute and execute again.
 
-![service error 503](/images/service-503-error-rate-limit-1024x533.jpg "service error 503")
+![service error 503](/images/blog/service-503-error-rate-limit-1024x533.jpg "service error 503")
 
 Open the API GET Url https://localhost:7241/WeatherForecast directly in the browser, you will get the default 503 error page in browser. Below screenshot shows how it appears in Opera browser.
 
-![opera 503 default](/images/opera-503-default-1024x373.jpg "opera 503 default")
+![opera 503 default](/images/blog/opera-503-default-1024x373.jpg "opera 503 default")
 
 ## Customize Error code and message
 
@@ -106,7 +106,7 @@ public static void ConfigureRateLimit(this IServiceCollection services)
 
 Now run the project and execute the default GET request 10+ times. You will get the 429 error code. Open the URL https://localhost:7241/WeatherForecast directly in the browser. Now you will see the default 429 error page in the browser like below.
 
-![429 too many requests](/images/429-too-many-requests-1024x295.jpg "429 too many requests")
+![429 too many requests](/images/blog/429-too-many-requests-1024x295.jpg "429 too many requests")
 
 But it still does not convey the proper error message. The browser understands the error code, but we need to send the response more clearly in message. We can modify the response text as below.
 
@@ -144,7 +144,7 @@ services.AddRateLimiter(options =>
 
 Now run the API project and open the URL https://localhost:7241/WeatherForecast directly in the browser. Refresh the page 10 times, the API will be executed. 11th time you will get text response as follows.
 
-![429 text response](/images/429-text-response-too-many-requests-1024x238.jpg "429 text response")
+![429 text response](/images/blog/429-text-response-too-many-requests-1024x238.jpg "429 text response")
 
 Now this code is usable for API clients like React using Axios or other http library. You can display proper message to the client that the API has reached the maximum number of requests allowed. And it should wait to make another request.
 

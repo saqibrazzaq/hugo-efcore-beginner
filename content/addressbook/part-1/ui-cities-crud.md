@@ -15,7 +15,7 @@ The state dropdown calls the StateApi.search method, which calls our web API /ap
 
 Below screenshot shows the State dropdown, which shows state name as label. For well known states, we can surely recognize them from just name. But it would be much better if the dropdown also displays country name with state.
 
-![state dropdown with no country](/images/state-dropdown-with-no-country.jpg "state dropdown with no country")
+![state dropdown with no country](/images/blog/state-dropdown-with-no-country.jpg "state dropdown with no country")
 
 To display the country name in state dropdown, first we have to update the repository in web API. Open the web API project, open Repository\StatteRepositoryExtensions.cs file. Update the Search method and add Include method, which includes the related entity Country.
 
@@ -33,7 +33,7 @@ public static IQueryable<State> Search(this IQueryable<State> items,
 
 Stop and run the ASP.NET web API project again. Open the default Swagger UI, go to States section, click on /api/States/Search GET method. In response now you should see Country data, for each state.
 
-![state has country data swagger](/images/state-has-country-data-swagger.jpg "state has country data swagger")'
+![state has country data swagger](/images/blog/state-has-country-data-swagger.jpg "state has country data swagger")'
 
 Just one Include statement and now we get the data from related table. This is too easy in Entity Framework. But beware that this can affect performance of database. Here the state has exactly one country, so it is not a big issue. But it would really hurt performance if you include data from related children e.g. Include States of a Country would fetch all states of that country. We will get to the performance issues later.
 
@@ -54,7 +54,7 @@ Create a new folder **src\pages\city**. Add new file **Cities.tsx**. Type rafce 
 
 Like we added Country dropdown in states page, here we added States dropdown in Cities page.
 
-![cities with states dropdown having country](/images/cities-with-state-dropdown-having-country.jpg "cities with state dropdown having country")
+![cities with states dropdown having country](/images/blog/cities-with-state-dropdown-having-country.jpg "cities with state dropdown having country")
 
 ## City Edit page
 
@@ -67,7 +67,7 @@ Open React project, add new file in **src\pages\city**, name it **CityEdit.tsx**
 
 The code is just like the Edit State page. Nothing new to learn here. You may create this page yourself by referring to the code of EditCountry.tsx. The complete code is available on [GitHub](https://github.com/saqibrazzaq/efcorebeginner/blob/main/AddressBook/react-client/src/pages/city/CityEdit.tsx).
 
-![edit city](/images/edit-city.jpg "edit city")
+![edit city](/images/blog/edit-city.jpg "edit city")
 
 ## Delete City page
 
@@ -75,7 +75,7 @@ Create **CityDelete.tsx** in **src\pages\city** folder. The Url format is localh
 
 Save the file and run the project, try to delete a city. The web API /api/cities/{cityId} just loads the city information from the database. It does not include any relational data from state. In DTO, we have stateId and StateRes, but we are not loading from database (repository).
 
-![delete city without state information](/images/delete-city-without-state-information.jpg "delete city without state information")
+![delete city without state information](/images/blog/delete-city-without-state-information.jpg "delete city without state information")
 
 To load the data from the related table state, first we need to update in web API. Open web API project and open Services\CityService.cs file. View the Get method, which loads the city against city id. It calls FindCityIfExists method, which is being reused in Get and Delete. Add Include method and load the State as follows.
 
@@ -112,7 +112,7 @@ const showCityInfo = () => (
 
 Save the file and try to delete a city again, it should show the state information with city now.
 
-![city delete with state](/images/city-delete-with-state.jpg "city delete with state")
+![city delete with state](/images/blog/city-delete-with-state.jpg "city delete with state")
 
 We can even display country name too, with state. CityRes dto has StateRes as its member. And StateRes dto has CountryRes. So if we just update our web API and include Country, it will be loaded as well.
 
@@ -147,10 +147,10 @@ Save the file and open delete city page, now the country name will also appear w
 
 If we had used JavaScript, there would be no intellisense, no compiler level type checking. We could do mistake when we put . to get members of a class/dto. So TypeScript is always preferrable to do programming using Object Oriented approach.
 
-![city state country vs code intellisense](/images/city-state-country-vs-code-intellisense.jpg "city state country vs code intellisense")
+![city state country vs code intellisense](/images/blog/city-state-country-vs-code-intellisense.jpg "city state country vs code intellisense")
 
 Save the file and open the delete page again, now it shows state with country information.
 
-![city shows state and country data](/images/city-shows-state-and-country-data.jpg "city shows state and country data")
+![city shows state and country data](/images/blog/city-shows-state-and-country-data.jpg "city shows state and country data")
 
 The complete code for search, edit and delete city is available on [GitHub](https://github.com/saqibrazzaq/efcorebeginner/tree/main/AddressBook/react-client/src/pages/city).

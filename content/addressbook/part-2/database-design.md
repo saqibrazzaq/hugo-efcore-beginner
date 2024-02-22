@@ -9,13 +9,13 @@ TocOpen: true
 
 Before we start the database design for contacts, lets have a look at Google Contacts, which is our original inspiration to start this project. We have added a new contact with randomly generated name, address and phone number.
 
-![google contact buddy green](/images/google-contact-buddy-green.jpg "google contact buddy green")
+![google contact buddy green](/images/blog/google-contact-buddy-green.jpg "google contact buddy green")
 
 A contact will obviously have First Name, Middle and Last Name. In Google contacts, we can also save his company name, job title and department. We cannot save job history, there are not multiple company information for a contact, we can save only one company, job title and department.
 
 We can save multiple email addresses for a single contact. Each email address can optionally have a label. You can click on + button and keep adding multiple email addresses. So there is one to many relationship between Contact and Emails. We also have email labels, which need to be defined in a separate table like EmailLabel.
 
-![multiple email addresses](/images/multiple-email-addresses.jpg "multiple email addresses")
+![multiple email addresses](/images/blog/multiple-email-addresses.jpg "multiple email addresses")
 
 Similarly we can also save multiple phone numbers for a contact. Each phone number may have optional phone label. Click on + button to keep adding multiple phone numbers. So there will also be one to many relationship between Contact and Phone. And for labels, we will create a separate table PhoneLabel.
 
@@ -25,7 +25,7 @@ Each contact may also have multiple labels. There will be one to many relationsh
 
 So based on above analysis, we have come up with the following database design.
 
-![addressbook database design](/images/addressbook-database-design-1024x890.jpg "address book database design")
+![addressbook database design](/images/blog/addressbook-database-design-1024x890.jpg "address book database design")
 
 As per above database design, we have total 18 tables to manage the contacts in address book app, having some of the basic features of Google Contacts.
 
@@ -124,7 +124,7 @@ public class ContactLabel
 
 To understand the relationship between Contact, ContactLabel and Label, have a look at the database design diagram below. Labels are defined in separate table. Contacts exist in its own table. One contact may have 0 or more labels, so we have created a linked table ContactLabel.
 
-![contact label database design](/images/contact-label-database-design.jpg "contact label database design")
+![contact label database design](/images/blog/contact-label-database-design.jpg "contact label database design")
 
 Lets create the ContactPhone entity now. Create a new class ContactPhone in Entities folder and add the code below. ContactPhone has the following fields.
 
@@ -166,7 +166,7 @@ public class ContactPhone
 
 To have a better understanding, view the database diagram below.
 
-![phone label database design](/images/phone-label-database-design.jpg "phone label database design")
+![phone label database design](/images/blog/phone-label-database-design.jpg "phone label database design")
 
 Similarly create the entity classes for other tables. You can get the code for all entities from [GitHub](https://github.com/saqibrazzaq/efcorebeginner/tree/main/AddressBook/AddressBook/Entities).
 

@@ -3,7 +3,7 @@ title: Massively Improve Search Query Performance by Index Columns
 ShowToc: true
 TocOpen: true
 cover:
-  image: "/images/performance-search-index.jpg"
+  image: "/images/blog/performance-search-index.jpg"
   caption: "Photo by Marc-Olivier Jodoin on Unsplash"
 ---
 

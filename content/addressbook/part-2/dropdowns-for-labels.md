@@ -9,7 +9,7 @@ Previously we created dropdowns for Country and State. The dropdowns are generic
 
 Now we need the dropdowns for all the 6 label definitions. Take a look at the screenshot below to get an idea where the label dropdowns will be used.
 
-![phone label dropdown](/images/phone-label-dropdown.jpg "phone label dropdown")
+![phone label dropdown](/images/blog/phone-label-dropdown.jpg "phone label dropdown")
 
 In the above screenshot we can choose a label for contact phone number. We ask the user to search and select an appropriate label using the dropdown, it is not free text based, but user can only choose a dropdown from an existing label.
 

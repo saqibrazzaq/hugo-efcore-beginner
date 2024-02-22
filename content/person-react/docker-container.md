@@ -146,5 +146,5 @@ public static void ConfigureCors(this IServiceCollection services)
 
 Bow rebuild and redeploy the web API and React app by running the batch file updatedocker.bat in the main folder, where .sln and docker-compose.yml file exists. After this update, the web API hosted inside Docker will allow API calls from localhost:8003.
 
-![react app on docker local](/images/react-app-on-docker-local.jpg "react app on docker local")
+![react app on docker local](/images/blog/react-app-on-docker-local.jpg "react app on docker local")
 

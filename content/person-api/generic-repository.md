@@ -7,7 +7,7 @@ TocOpen: true
 
 This is the 3rd article on the beginning EF Core series. In the previous articles we created a new Web API project, entity class, DbContext class, used DotNetEnv to keep connection string in env file, initialized the EF Core in Program.cs and then finally created the database using our first migration command.
 
-![layer](/images/layer.jpg "layer")
+![layer](/images/blog/layer.jpg "layer")
 *Photo by Pixabay: https://www.pexels.com/photo/asphalt-balance-blur-close-up-268018/*
 
 Now it is time to do CRUD operations with the database using the Entity Framework. You can directly call the EF Core classes for create, read, update and delete operations, but that is not recommended approach. We use the layers architecture and keep the database related operations in the Repository layer.
@@ -149,7 +149,7 @@ We will not go into more details now. If you are seeing LINQ expressions and gen
 
 Are we ready now to do CRUD on the Person table. Not yet. Actually we can initialize RepositoryBase<Person>, but we will not do it this way. We will create separate repository classes for each entity.
 
-![wait](/images/wait.jpg "wait")
+![wait](/images/blog/wait.jpg "wait")
 *Photo by Andrea Piacquadio: https://www.pexels.com/photo/young-annoyed-female-freelancer-using-laptop-at-home-3808008/*
 
 This is really too long time to do a simple CRUD on a table with 4-5 fields. But we will in future have a slightly bigger application, with 5-6 related tables, having hundreds of thousands of records. Once we setup the Repository right, we will be able to create entity’s separate repository classes very quickly.
