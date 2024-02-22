@@ -1,6 +1,6 @@
 ---
 title: 11. Dockerize the AddressBook web API and React Client App
-weight: 800
+weight: 810
 ShowToc: true
 TocOpen: true
 ---

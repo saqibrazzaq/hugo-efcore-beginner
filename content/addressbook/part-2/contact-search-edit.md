@@ -1,6 +1,6 @@
 ---
 title: 10. Contact Search, Edit and Delete Pages
-weight: 790
+weight: 800
 ShowToc: true
 TocOpen: true
 ---
