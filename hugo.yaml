@@ -134,6 +134,10 @@ menu:
       name: Address Book
       url: /addressbook/
       weight: 30
+    - identifier: blazor
+      name: Blazor
+      url: /blazor/
+      weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
