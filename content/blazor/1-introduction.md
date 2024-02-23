@@ -58,3 +58,72 @@ Then you visit www.website.com/page2, you already have the runtime, so the execu
 This is the generic type and recommended to be used in general. You have the control at page level, whether it executes on the server or on the browser. It is the combination of the Blazor server and WebAssembly project types.
 
 Whenever in doubt, use the Blazor web app type.
+
+## Create Blazor Project
+
+Open Visual Studio 2022 and make sure that you have the latest version installed. At current date, the latest version is 17.9.
+
+Create a new project, select "Blazor Web App" from the project types. Make sure that .NET Framework selected is .NET 8 Long Term Support. Leave all the options as default and create the project.
+
+![Blazor folder structure](/images/blazor/blazor-folder-structure.jpg "Blazor folder structure")
+
+Check the "Pages" folder, which contains 4 Razor files. These are components.
+
+Also have a look at the "Layout" folder, which has 2 razor files. These are also components.
+
+Open Home.razor, it shows Hello World in h1 heading and after that a welcome message in a new line.
+
+## Add New Component
+
+Add a new component in Pages folder as below.
+
+![Add new component](/images/blazor/blazor-add-new-component.jpg "Add new component")
+
+Name it "WelcomeMessage". It will create a new WelcomeMessage.razor file in Pages folder. It contains Welcome text in h3 tag and also an empty code block. This is a very basic component, which can be used in other components.
+
+Open Home.razor. Delete "Welcome to your new app" line. Add the new welcome component to display the message.
+
+```html
+@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<WelcomeMessage />
+```
+
+Run the project, you should see the welcome message coming from the component.
+
+![welcome component](/images/blazor/welcome-component.jpg "welcome component")
+
+In similar way you can also include Counter and Weather components from the Home page. The component can work independently as a separate page and can also be included in another page.
+
+## One way data binding
+
+Open Counter page in the newly created Blazor project. It has
+
+- A paragraph that should count
+- A button that increments count by 1
+
+The count is stored in the variable currentCount. The variable is declared in the code block. Its value is displayed in the HTML paragraph with @currentCount.
+
+The button click event calls the method in the code block. The method increments the same variable.
+
+This is one way data binding, means the variable is updated in code block, and its value can be accessed in HTML.
+
+![one way data binding](/images/blazor/one-way-data-binding.jpg "one way data binding")
+
+## Two way data binding
+
+In one way data binding, the value of variable can be changed from one side e.g. code block.
+
+In two way data binding, the value can be changed from code as well as HTML input.
+
+Add a new form input textbox in the Counter component and set its bind-value to the currentCount variable.
+
+![two way data binding](/images/blazor/two-say-data-binding.jpg "two way data binding")
+
+Now the currentCount variable is also bound to the input textbox. Run the app. You will note that the count value is also displayed in the textbox. Increment the count with button, the textbox value will also be updated. 
+
+Try to change the value in textbox, the variable will also be updated.
