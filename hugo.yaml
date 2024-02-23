@@ -13,6 +13,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 mainsections: ["posts"]
+pluralizeListTitles: false
 
 googleAnalytics: G-3H1V8ZWTTY
 
@@ -47,7 +48,7 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
-
+  
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
